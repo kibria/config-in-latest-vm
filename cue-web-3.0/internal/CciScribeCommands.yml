@@ -1,0 +1,41 @@
+toolbarButtons:
+  - commandName: "note"
+    label: "note" #translate
+    cssClass: "note"
+    toolbarType: "cci-toolbar"
+    order: 732
+  - commandName: "insertTagCci"
+    label: "Insert Tag" #translate
+    cssClass: "insert-tag"
+    toolbarType: "cci-toolbar"
+    order: 729
+  - commandName: "removeTagCci"
+    label: "Remove Macro" #translate
+    cssClass: "zero-width"
+    toolbarType: "cci-toolbar"
+    order: 730
+  - commandName: "clearFormatting"
+    label: "Clear Formatting" #translate
+    cssClass: "clear-format"
+    toolbarType: "cci-toolbar"
+    order: 731
+scribeCommands:
+  - serviceName: "cf.cci.scribe.note.command.service"
+    restrict: "newsgate"
+    order: 732
+  - serviceName: "cf.cci.scribe.insertTag.command.service"
+    restrict: "newsgate"
+    order: 729
+  - serviceName: "cf.cci.scribe.removeTag.command.service"
+    restrict: "newsgate"
+    order: 730
+  - serviceName: "cf.cci.scribe.clearFormatting.command.service"
+    restrict: "newsgate"
+    order: 731
+scribeToolbarDropDowns:
+  - directive: "cf-cci-scribe-tags-drop-down"
+    toolbarType: "cci-toolbar"
+    order: 729
+  - directive: "cf-cci-scribe-remove-tags-drop-down"
+    toolbarType: "cci-toolbar"
+    order: 730

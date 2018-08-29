@@ -1,0 +1,16 @@
+#editors:
+#  metadata:
+#    - name: "sp-escenic-semantic-panel"
+#      directive: "sp-escenic-semantic-panel"
+#      cssClass: "semanticplugin"
+#      title: "Semantic Analysis" #translate
+#      mimeTypes: ["x-ece/story", "x-ece/new-content; type=story"]
+#      args: 'ng-model="ngModel.resource.data" lock-helper="ngModel.lockHelper"'
+#      requires: ['escenic']
+#      order: 850
+#semanticEntityTypes:
+#  # define entity types like the following:
+#  - name: "PER"
+#    tagScheme: "tag:person@example.com,2011"
+#  - name: "LOC"
+#    tagScheme: "tag:places@example.org,2011"

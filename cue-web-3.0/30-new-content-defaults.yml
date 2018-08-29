@@ -1,0 +1,13 @@
+newContentDefaults:
+  - type: "story"
+    icon: "story"
+  - type: "picture"
+    icon: "picture"
+  - type: "video"
+    icon: "video"
+  - type: "event"
+    icon: "event"
+  - type: "gallery"
+    icon: "gallery"
+  - type: "newsgatetext"
+    icon: "newsgatetext"

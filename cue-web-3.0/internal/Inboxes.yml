@@ -1,0 +1,11 @@
+sidePanels:
+  - id: "cf-inboxes-sidepanel"
+    name: "Inboxes" #translate
+    cssClass: "inboxes"
+    directive: "cf-inboxes-sidepanel"
+    mimeTypes: ["x-ece/section", "x-ece/section-page"]
+    homeScreen: false
+    metadata: []
+    active: false
+    requires:  ["escenic"]
+    order: 705

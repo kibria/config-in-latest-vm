@@ -1,0 +1,9 @@
+editors:
+  fieldServices:
+    - serviceName: "cf.escenic.button.field.service"
+      requires:  ["escenic"]
+      order: 713
+escenicFieldConverters:
+  - serviceName: "cf.escenic.button.field.converter"
+    requires:  ["escenic"]
+    order: 311

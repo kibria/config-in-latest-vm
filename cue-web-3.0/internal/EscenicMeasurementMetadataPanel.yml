@@ -1,0 +1,10 @@
+editors:
+  metadata:
+    - name: "cf-escenic-measurement-metadata-panel"
+      cssClass: "measurement"
+      title: "Measurements" #translate
+      directive: "cf-escenic-measurement-directive"
+      mimeTypes: ["x-ece/story"]
+      args: 'item-id="ngModel.itemId" content="ngModel.resource.data" active="ngModel.active"'
+      requires: ["escenic", "newsgate", "bridge"]
+      order: 727

@@ -1,0 +1,42 @@
+editors:
+  metadata:
+    - name: "cf-escenic-tags-metadata-panel"
+      cssClass: "tags"
+      title: "Tags" #translate
+      directive: "cf-escenic-metadata-tags"
+      mimeTypes:
+        - "x-ece/story"
+        - "x-ece/new-content; type=story"
+        - "x-ece/storyline"
+        - "x-ece/new-content; type=storyline"
+        - "x-ece/picture"
+        - "x-ece/new-content; type=picture"
+        - "x-ece/gallery"
+        - "x-ece/new-content; type=gallery"
+        - "x-ece/event"
+        - "x-ece/new-content; type=event"
+        - "x-ece/video"
+        - "x-ece/new-content; type=video"
+      args: 'ng-model="ngModel.resource.data" lock-helper="ngModel.lockHelper"'
+      requires:  ["escenic"]
+      order: 726
+dialogs:
+  - id: "cf-escenic-new-tag"
+    name: "New Tag"
+    directive: "cf-escenic-new-tag"
+    order: 722
+listItems:
+  - id: "escenic-tag"
+    directive: "cf-list-item-tag"
+    mimeTypes: ["x-ece/tag"]
+    requires: ["escenic"]
+    order: 742
+homeScreenMetadata:
+  - homePanels: "cf-escenic-search-sidepanel"
+    directive: "cf-escenic-home-metadata-tags"
+    name: "Tags"
+    cssClass: "tags"
+    title: "Tags"
+    selection: ["single", "multi"]
+    args: 'references="ngModel.entries.selections"'
+    order: 510

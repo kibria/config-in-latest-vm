@@ -1,0 +1,57 @@
+editors:
+  editors:
+    - name: "cf-assignment-editor"
+      directive: "cf-assignment-editor"
+      mimeTypes: [ "x-cci/assignment; type=picture" ]
+      requires:  ["newsgate"]
+      order: 723
+favicons:
+  - path: "Images/static/favicon_type_assignment_photo.ico"
+    mimeTypes: ["x-cci/assignment; type=picture"]
+    order: 723
+sidePanels:
+  - id: "cf-assignment-sidepanel"
+    name: "Assignments" #translate
+    cssClass: "assignments"
+    directive: "cf-assignment-sidepanel"
+    mimeTypes:
+      - "x-ece/story"
+      - "x-ece/new-content; type=story"
+      - "x-cci/text"
+    homeScreen: true
+    metadata: []
+    active: false
+    requires:  ["newsgate"]
+    order: 702
+homeScreenMetadata:
+    - homePanels: "cf-assignment-sidepanel"
+      directive: "cf-assignment-metadata-general"
+      name: "Assignment metadata" #translate
+      cssClass: "general-info"
+      title: "General info" #translate
+      dependencies: []
+      args: 'assignment="ngModel.focusedResult"'
+      order: 701
+    - homePanels: "cf-assignment-sidepanel"
+      directive: "cf-no-focus-metadata"
+      name: "No focus metadata" #translate
+      cssClass: "general-info"
+      title: "General info" #translate
+      dependencies: []
+      requires:  ["newsgate"]
+      order: 701
+      selection: ["none"]
+listItems:
+  - id: "cci-assignment"
+    directive: "cf-cci-assignment-list-item"
+    mimeTypes:
+      - "x-cci/assignment; type=text"
+      - "x-cci/assignment; type=picture"
+    requires:  ["newsgate"]
+    order: 741
+dialogs:
+  - id: "cf-assignment-dialog"
+    name: "Assignment Dialog"
+    directive: "cf-assignment-dialog"
+    requires:  ["newsgate"]
+    order: 723

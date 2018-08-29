@@ -1,0 +1,171 @@
+endpointServices:
+  escenic:
+    - serviceName: "cf.escenic.lock.service"
+    - serviceName: "cf.escenic.version.service"
+editors:
+  fieldServices:
+    - serviceName: "cf.escenic.section.parameters.field.service"
+      order: 509
+    - serviceName: "cf.escenic.xhtml.field.editor.service"
+      requires: ["escenic"]
+      order: 521
+    - serviceName: "cf.fieldeditors.custom.service"
+      requires: ["escenic"]
+      order: 501
+    - serviceName: "cf.escenic.image.field.editor.service"
+      requires: ["escenic"]
+      order: 523
+    - serviceName: "cf.escenic.collection.field.editor.service"
+      requires: ["escenic"]
+      order: 524
+    - serviceName: "cf.escenic.alignment.field.editor.service"
+      order: 525
+    - serviceName: "cf.escenic.revert.field.editor.service"
+      order: 526
+  storyElementServices:
+    - serviceName: 'text-story-element-editor-service'
+      order: 501
+    - serviceName: 'image-story-element-editor-service'
+      order: 502
+    - serviceName: 'video-story-element-editor-service'
+      order: 503
+    - serviceName: 'gallery-story-element-editor-service'
+      order: 504
+    - serviceName: 'embed-story-element-editor-service'
+      order: 505
+    - serviceName: 'relation-story-element-editor-service'
+      order: 506
+    - serviceName: 'generic-story-element-editor-service'
+      order: 507
+
+escenicFieldConverters:
+  - serviceName: "cf.escenic.section.parameters.field.converter"
+    order: 511
+  - serviceName: "cf.escenic.collection.field.converter"
+    order: 505
+  - serviceName: "cf.escenic.enum.field.converter"
+    order: 508
+  - serviceName: "cf.escenic.text.field.converter"
+    order: 513
+  - serviceName: "cf.escenic.xhtml.field.converter"
+    order: 514
+  - serviceName: "cf.escenic.custom.field.converter"
+    order: 501
+  - serviceName: "cf.escenic.boolean.field.converter"
+    order: 516
+  - serviceName: "cf.escenic.date.field.converter"
+    order: 517
+  - serviceName: "cf.escenic.uri.field.converter"
+    order: 517
+  - serviceName: "cf.escenic.link.field.converter"
+    order: 519
+  - serviceName: "cf.escenic.number.field.converter"
+    order: 520
+  - serviceName: "cf.escenic.json.field.converter"
+    order: 911
+  - serviceName: "cf.escenic.array.field.converter"
+    order: 912
+  - serviceName: "cf.escenic.complex.field.converter"
+    order: 913
+
+listItems:
+  - id: "escenic-story"
+    directive: "cf-list-item-story"
+    mimeTypes: ["x-ece/story"]
+    requires:  ["escenic"]
+    order: 511
+  - id: "escenic-event"
+    directive: "cf-list-item-event"
+    mimeTypes: ["x-ece/event"]
+    requires:  ["escenic"]
+    order: 512
+  - id: "escenic-picture"
+    directive: "cf-list-item-picture"
+    mimeTypes: ["x-ece/picture"]
+    requires:  ["escenic"]
+    order: 513
+  - id: "escenic-gallery"
+    directive: "cf-list-item-gallery"
+    mimeTypes: ["x-ece/gallery"]
+    requires:  ["escenic"]
+    order: 514
+  - id: "escenic-video"
+    directive: "cf-list-item-video"
+    mimeTypes: ["x-ece/video"]
+    requires:  ["escenic"]
+    order: 515
+  - id: "escenic-person"
+    directive: "cf-list-item-person"
+    mimeTypes: ["x-ece/person"]
+    requires:  ["escenic"]
+    order: 516
+  - id: "escenic-section-page"
+    directive: "cf-list-item-section-page"
+    mimeTypes: ["x-ece/section", "x-ece/section-page"]
+    order: 517
+  - id: 'escenic-storyline'
+    directive: 'cf-list-item-story'
+    mimeTypes: ['x-ece/storyline']
+    requires:  ['escenic']
+    order: 518
+
+sidePanels:
+  - id: "cf-latest-opened-leftpanel"
+    name: "Recent" #translate
+    cssClass: "latest"
+    directive: "cf-latest-opened-leftpanel"
+    mimeTypes: ["x-ece/*"]
+    homeScreen: true
+    requires:  ["escenic"]
+    active: false
+    order: 501
+
+homeScreenMetadata:
+  - homePanels: ["cf-latest-opened-leftpanel"]
+    directive: "cf-escenic-search-metadata"
+    name: "Search metadata"
+    cssClass: "general-info"
+    title: "General info" #translate
+    dependencies: []
+    args: 'content-reference="ngModel.focusedResult" content="ngModel.focusedContent"'
+    order: 501
+
+fileUploadServices:
+  - serviceName: "cf.escenic.file.upload.service"
+    requires:  ["escenic"]
+    order: 501
+
+currentUserServices:
+  - serviceName: "cf.escenic.currentUser.service"
+    requires:  ["escenic"]
+    order: 501
+
+dialogs:
+  - id: "cf-escenic-data-loss"
+    name: "Data Loss"
+    directive: "cf-escenic-data-loss"
+    requires: ["escenic"]
+    order: 501
+  - id: 'select-template-dialog'
+    name: 'Select template'
+    directive: 'select-template-dialog'
+    order: 502
+  - id: 'cf-update-credentials'
+    name: 'Update Credentials'
+    directive: 'cf-update-credentials'
+    order: 503
+
+sysinfoServices:
+  - serviceName: "cf.escenic.sse.sysinfo.service"
+    order: 511
+  - serviceName: "cf.escenic.version.sysinfo.service"
+    order: 512
+
+# to enable custom field editors as web components you have to configure some custom field editors
+# on the content engine (http://docs.escenic.com/ece-cs-plugin-guide/5.7/custom_field_editors.html)
+# You can then configure CUE to use a web component instead of a custom field editor by enabling it
+# here doing something like this:
+#
+#customComponents:
+#  - name: "geo-code"
+#    htmlImport:  "http://www.example.com/webcomponents/geo-code/index.html"

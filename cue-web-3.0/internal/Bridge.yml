@@ -1,0 +1,8 @@
+endpointServices:
+  bridge:
+    - serviceName: "cf.bridge.service"
+      requires: ["bridge"]
+sysinfoServices:
+  - serviceName: "cf.bridge.sysinfo.service"
+    requires: ["bridge"]
+    order: 710

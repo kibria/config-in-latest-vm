@@ -1,0 +1,13 @@
+dropTriggers:
+  - name: NewsgateImageImport
+    href: "http://localhost:2082/NewsgateImageImport"
+    triggers:
+      mimeTypes: ["x-cci/picture"]
+    resultMimeType: x-ece/picture
+    attributes:
+      - publication: "tomorrow-online"
+        bridgeId: "ngx_ng-cuedevio"
+        captionFields:
+          caption: "caption"
+          byline: "photographer"
+          credit: "credits"

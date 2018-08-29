@@ -1,0 +1,140 @@
+debug: false
+cacheCleanupInterval: 60000
+mobileWidthThreshold: 700
+autoSaveInterval: 3000
+
+applicationLoadDependencies: []
+
+browserDisclaimer:
+  browsers:
+    - name: "chromium"
+      detection: "Chromium/[.0-9]*"
+    - name: "chrome"
+      detection: "Chrome/[.0-9]*"
+    - name: "safari"
+      detection: "Safari"
+  devices:
+    - name: "desktop"
+      fallback: true
+      browsers:
+        - name: "chrome"
+          version: 57
+    - name: "iOS"
+      detection: "iPad|iPhone|iPod"
+      browsers:
+        - name: "safari"
+          version: 0
+    - name: "android"
+      detection: "Android"
+      browsers:
+        - name: "chrome"
+          version: 57
+
+editors:
+  fieldServices:
+    - serviceName: "cf.fieldeditors.text.service"
+      order: 510
+    - serviceName: "cf.fieldeditors.number.service"
+      order: 511
+    - serviceName: "cf.fieldeditors.boolean.service"
+      order: 512
+    - serviceName: "cf.fieldeditors.uri.service"
+      order: 513
+    - serviceName: "cf.fieldeditors.date.service"
+      order: 514
+    - serviceName: "cf.fieldeditors.enum.single.service"
+      order: 515
+    - serviceName: "cf.fieldeditors.enum.multi.service"
+      order: 516
+    - serviceName: "cf.fieldeditors.array.service"
+      order: 517
+    - serviceName: "cf.fieldeditors.complex.service"
+      order: 518
+    - serviceName: "cf.fieldeditors.text.input.service"
+      order: 519
+    - serviceName: "cf.fieldeditors.binary.service"
+      order: 526
+
+toolbarButtons:
+  - commandName: "bold"
+    label: "bold" #translate
+    cssClass: "b"
+    order: 101
+  - commandName: "italic"
+    label: "italic" #translate
+    cssClass: "i"
+    order: 102
+  - commandName: "underline"
+    label: "underline" #translate
+    cssClass: "u"
+    order: 103
+
+  - commandName: "superscript"
+    label: "superscript" #translate
+    cssClass: "sup"
+    order: 501
+  - commandName: "subscript"
+    label: "subscript" #translate
+    cssClass: "sub"
+    order: 502
+  - commandName: "insertUnorderedList"
+    label: "unordered" #translate
+    cssClass: "ul"
+    order: 503
+  - commandName: "insertOrderedList"
+    label: "ordered" #translate
+    cssClass: "ol"
+    order: 504
+
+listItems:
+  - id: "shadow"
+    directive: "cf-list-item-shadow"
+    mimeTypes: ["x-cue/shadow"]
+    requires:  []
+    order: 701
+  - id: "fallback"
+    directive: "cf-list-item-fallback"
+    mimeTypes: ["*/*"]
+    order: 999
+dialogs:
+  - id: "cf-context-dialog"
+    name: "Context Dialog"
+    directive: "cf-context-dialog"
+    order: 101
+  - id: "cf-properties"
+    name: "Properties Dialog"
+    directive: "cf-properties-dialog"
+    order: 102
+sidePanels:
+  - id: "cf-settings-sidepanel"
+    name: "Settings" #translate
+    cssClass: "settings"
+    directive: "cf-settings-sidepanel"
+    homeScreen: true
+    platforms: ["desktop"]
+    active: false
+    order: 999
+sysinfoServices:
+  - serviceName: "cf.version.sysinfo.service"
+    order: 101
+  - serviceName: "cf.availability.sysinfo.service"
+    order: 501
+  - serviceName: "cf.config.sysinfo.service"
+    order: 901
+assetPanels:
+  - name: 'search'
+    title: 'Search' #translate
+    directive: 'cf-assets-search'
+    order: 101
+  - name: 'latest'
+    title: 'Recent' #translate
+    directive: 'cf-latest-opened-assets'
+    order: 102
+
+authSchemes:
+  - serviceName: "cf.login.oauth.auth.scheme.service"
+    order: 101
+  - serviceName: "cf.login.um.auth.scheme.service"
+    order: 102
+
+redirectToLoginPage: false

@@ -1,0 +1,16 @@
+escenicFieldConverters:
+  - serviceName: "video.field.converter"
+    order:  610
+editors:
+  fieldServices:
+    - serviceName: "video.field.editor.service"
+      order: 610
+    - serviceName: "video.time.field.editor.service"
+      order: 605
+    - serviceName: "video.text.field.editor.service"
+      order: 605
+  editors:
+    - name: "video-timeline-close-caption-editor"
+      directive: "video-timeline-close-caption"
+      mimeTypes: [ "video/ece-timeline" ]
+      order: 605

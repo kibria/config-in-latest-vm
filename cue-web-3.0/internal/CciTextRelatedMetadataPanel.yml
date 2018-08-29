@@ -1,0 +1,12 @@
+editors:
+  metadata:
+    - name: "cf-cci-related-metadata-panel"
+      cssClass: "related"
+      title: "Related" #translate
+      directive: "cf-cci-related-metadata-panel"
+      mimeTypes:
+        - "x-cci/text"
+        - "x-cci/newtext"
+      args: 'package-id="ngModel.packagePropertiesDelegate.packageId" story-id="ngModel.story.id"'
+      requires: ["newsgate-full-login"]
+      order: 712

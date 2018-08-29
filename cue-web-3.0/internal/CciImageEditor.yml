@@ -1,0 +1,11 @@
+editors:
+  editors:
+    - name: "cf-cci-image-editor"
+      directive: "cf-cci-image-editor"
+      mimeTypes: [ "x-cci/picture" ]
+      requires:  ["newsgate"]
+      order: 722
+favicons:
+  - path: "Images/static/favicon_type_photo.ico"
+    mimeTypes: ["x-cci/picture"]
+    order: 722

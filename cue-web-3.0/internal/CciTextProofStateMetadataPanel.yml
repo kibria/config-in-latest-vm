@@ -1,0 +1,10 @@
+editors:
+  metadata:
+    - name: "cf-text-cci-metadata-panel-proofstate-directive"
+      requires:  ["newsgate-full-login"]
+      cssClass: "proof-state"
+      title: "Proofreading" #translate
+      directive: "cf-text-cci-metadata-panel-proofstate-directive"
+      mimeTypes: ["x-cci/text", "x-ece/story"]
+      args: 'text-properties="ngModel.textPropertiesDelegate" text-id="ngModel.itemId"'
+      order: 728

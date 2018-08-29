@@ -1,0 +1,10 @@
+editors:
+  metadata:
+    - name: "cf-story-folder-metadata-panel"
+      requires:  ["newsgate-full-login"]
+      cssClass: "properties"
+      title: "Properties" #translate
+      directive: " cf-story-folder-metadata-panel-directive"
+      mimeTypes: ["x-cci/storyfolder"]
+      args: 'ng-model="ngModel.storyFolder.metadata" field-map="ngModel.textFieldsChanged" field-blur="ngModel.textFieldBlur(type)" display="ngModel.displayMetadata.value"'
+      order: 701

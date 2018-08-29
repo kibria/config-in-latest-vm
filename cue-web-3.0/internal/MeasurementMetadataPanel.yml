@@ -1,0 +1,5 @@
+previewComponents:
+  - name: "cf-measurement-preview"
+    directive: "cf-measurement-preview"
+    type: "measurement"
+    requires: ["newsgate"]

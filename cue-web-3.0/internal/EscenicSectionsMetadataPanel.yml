@@ -1,0 +1,27 @@
+editors:
+  metadata:
+    - name: "cf-escenic-sections-metadata-panel"
+      cssClass: "section"
+      title: "Section" #translate
+      directive: "cf-sections-metadata-panel-directive"
+      mimeTypes:
+        - "x-ece/story"
+        - "x-ece/new-content; type=story"
+        - "x-ece/storyline"
+        - "x-ece/new-content; type=storyline"
+        - "x-ece/picture"
+        - "x-ece/new-content; type=picture"
+        - "x-ece/gallery"
+        - "x-ece/new-content; type=gallery"
+        - "x-ece/event"
+        - "x-ece/new-content; type=event"
+        - "x-ece/video"
+        - "x-ece/new-content; type=video"
+      args: 'ng-model="ngModel.resource.data" lock-helper="ngModel.lockHelper"'
+      requires:  ["escenic"]
+      order: 723
+dialogs:
+  - id: "cf-escenic-sections-tree"
+    name: "Section Tree"
+    directive: "cf-escenic-sections-tree"
+    order: 721

@@ -1,0 +1,9 @@
+editors:
+  fieldServices:
+    - serviceName: "cf.escenic.image.crop.field.editor.service"
+      requires:  ["escenic"]
+      order: 711
+escenicFieldConverters:
+  - serviceName: "cf.escenic.image.crop.field.converter"
+    requires:  ["escenic"]
+    order: 711

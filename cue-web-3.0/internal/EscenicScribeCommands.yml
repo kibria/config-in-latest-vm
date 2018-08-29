@@ -1,0 +1,32 @@
+toolbarButtons:
+  - commandName: "uploadImage"
+    label: "Upload image" #translate
+    cssClass: "photo-upload"
+    toolbarType: "escenic-toolbar"
+    requires:  ["escenic"]
+    order: 301
+  - commandName: "addImageAsset"
+    label: "Add image from asset picker" #translate
+    cssClass: "photo-asset"
+    toolbarType: "escenic-toolbar"
+    requires:  ["escenic"]
+    order: 302
+  - commandName: "clearFormattingNoHighlight"
+    label: "Clear Formatting" #translate
+    cssClass: "clear-format"
+    toolbarType: "escenic-toolbar"
+    requires:  ["escenic"]
+    order: 732
+scribeCommands:
+  - serviceName: "cf.escenic.scribe.image.upload.command.service"
+    restrict: "escenic"
+    requires:  ["escenic"]
+    order: 301
+  - serviceName: "cf.escenic.scribe.image.asset.command.service"
+    restrict: "escenic"
+    requires:  ["escenic"]
+    order: 302
+  - serviceName: "cf.escenic.scribe.clearFormattingNoHighlight.command.service"
+    restrict: "escenic"
+    requires:  ["escenic"]
+    order: 732

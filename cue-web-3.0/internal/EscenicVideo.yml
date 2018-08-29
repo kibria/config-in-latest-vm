@@ -1,0 +1,9 @@
+editors:
+  fieldServices:
+    - serviceName: "cf.escenic.video.field.editor.service"
+      requires:  ["escenic"]
+      order: 701
+escenicFieldConverters:
+  - serviceName: "cf.escenic.video.field.converter"
+    requires:  ["escenic"]
+    order: 701

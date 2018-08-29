@@ -1,0 +1,5 @@
+(function(config) {
+    //inject
+    //endinject
+    window.cue.config = cue.core.util.array.sortArrays(config, 'order')
+})(window.cue.config || {});

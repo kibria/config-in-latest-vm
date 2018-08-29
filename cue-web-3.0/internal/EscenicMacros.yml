@@ -1,0 +1,31 @@
+toolbarButtons:
+  - commandName: "insertMacro"
+    label: "Insert Macro" #translate
+    cssClass: "insert-macro"
+    toolbarType: "escenic-toolbar"
+    requires: ["escenic"]
+    order: 728
+  - commandName: "removeMacro"
+    label: "Remove Macro" #translate
+    cssClass: "zero-width"
+    toolbarType: "escenic-toolbar"
+    requires: ["escenic"]
+    order: 731
+scribeCommands:
+  - serviceName: "cf.escenic.macro.insert.command.service"
+    requires: ["escenic"]
+    restrict: "escenic"
+    order: 728
+  - serviceName: "cf.escenic.macro.remove.command.service"
+    requires: ["escenic"]
+    restrict: "escenic"
+    order: 731
+scribeToolbarDropDowns:
+  - directive: "cf-escenic-macro-drop-down"
+    toolbarType: "escenic-toolbar"
+    requires: ["escenic"]
+    order: 728
+  - directive: "cf-escenic-remove-macro-drop-down"
+    toolbarType: "escenic-toolbar"
+    requires: ["escenic"]
+    order: 731

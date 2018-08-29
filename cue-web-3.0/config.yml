@@ -1,0 +1,41 @@
+endpoints:
+  escenic: "http://ece-install:80/webservice/index.xml"
+  #newsgate: "<replace-me>"
+
+# To enable OAuth2 authentication, you need to uncomment the object below and
+# add your own configuration. Please follow the Escenic Content Engine
+# documentation for setting this up.
+# The scope MUST match the scope setup by Content Engine.
+#
+
+#oauth:
+#  authURI: "https://accounts.google.com/o/oauth2/auth"
+#  clientId: "<your-client-id>"
+#  scope: "email"
+
+
+# To specify trusted hosts that should receive the user's credentials (i.e. the Authorization header) from CUE,
+# so that the enrichment service may perform further requests on the user's behalf, add the following to your
+# configuration file:
+
+#authorizedEndpoints:
+#  - "http://my-enrichment-service.info:1234/"
+
+# To specify urls that should use for logout trigger.
+# This url only use for trigger purpose, no matter what it return as response and will not wait for that.
+# CUE will send GET requests to these URLs
+# Multiple url supported.
+
+#logoutTriggers:
+#  - "<replace-me>"
+
+
+#To specify whether CUE should redirect to login provider's login page. Value can be true/false.
+
+#redirectToLoginPage: <replace-me>
+extendedContextMenuItems:
+  - name: "html-service"
+    title: "html-service"
+    trigger: "on-html-service-click"
+    publication: "demo"
+    mimeTypes: ["x-ece/story"]

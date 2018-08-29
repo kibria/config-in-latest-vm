@@ -1,0 +1,9 @@
+editors:
+  metadata:
+    - name: "Tag panel"
+      directive: "tag-panel-kibria"
+      webComponent: 
+        htmlImport: "http://ece-install/tag-panel-kibria.html"
+        icon: "content-history-icon"
+      mimeTypes: ["x-ece/story"]
+      order: 728

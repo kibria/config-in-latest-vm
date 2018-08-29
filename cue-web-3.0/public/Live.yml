@@ -1,0 +1,125 @@
+editors:
+  editors:
+    - name: 'lc-editors-event'
+      directive: 'lc-editors-event'
+      mimeTypes: ['x-ece/event', 'x-ece/new-content; type=event']
+      order: 600
+      requires: ['escenic']
+  fieldServices:
+    - serviceName: 'lc.xhtml.field.editor.service'
+      requires: ['escenic']
+      order: 400
+      requires: ['escenic']
+    - serviceName: 'lc.text.field.editor.service'
+      requires: ['escenic']
+      order: 401
+      requires: ['escenic']
+favicons:
+  - path: 'Images/cuelive/favicon_type_event.ico'
+    mimeTypes: ['x-ece/event', 'x-ece/new-content; type=event']
+    order: 600
+sidePanels:
+  - name: 'Live Inbox'
+    directive: 'lc-side-panels-moderation-hub'
+    id: 'lc-side-panels-moderation-hub'
+    mimeTypes: ['x-ece/event']
+    order: 600
+    cssClass: 'moderationhub'
+    requires: ['escenic']
+  - name: 'Twitter'
+    directive: 'lc-side-panels-twitter'
+    id: 'lc-side-panels-twitter'
+    mimeTypes: ['x-ece/event']
+    order: 601
+    cssClass: 'twitter'
+    requires: ['escenic']
+  - name: 'YouTube'
+    directive: 'lc-side-panels-youtube'
+    id: 'lc-side-panels-youtube'
+    mimeTypes: ['x-ece/event']
+    order: 602
+    cssClass: 'youtube'
+    requires: ['escenic']
+  - name: 'RSS'
+    directive: 'lc-side-panels-rss'
+    id: 'lc-side-panels-rss'
+    mimeTypes: ['x-ece/event']
+    order: 603
+    cssClass: 'rss'
+    requires: ['escenic']
+toolbarButtons:
+  - commandName: 'h2'
+    cssClass: 'icon rte header'
+    order: 201
+    toolbarType: 'live-toolbar'
+    requires: ['escenic']
+  - commandName: 'bold'
+    cssClass: 'icon rte bold'
+    order: 202
+    toolbarType: 'live-toolbar'
+    requires: ['escenic']
+  - commandName: 'italic'
+    cssClass: 'icon rte italic'
+    order: 203
+    toolbarType: 'live-toolbar'
+    requires: ['escenic']
+  - commandName: 'underline'
+    cssClass: 'icon rte under-line'
+    order: 204
+    toolbarType: 'live-toolbar'
+    requires: ['escenic']
+  - commandName: "lcUploadImage"
+    cssClass: "icon rte local-image"
+    order: 205
+    toolbarType: 'live-toolbar'
+    requires: ['escenic']
+  - commandName: "addLcImageAsset"
+    cssClass: "icon rte image"
+    order: 206
+    toolbarType: "live-toolbar"
+    requires: ['escenic']
+  - commandName: 'embedEntry'
+    cssClass: 'icon rte code'
+    order: 207
+    toolbarType: 'live-toolbar'
+    requires: ['escenic']
+  - commandName: 'insertUnOrderedList'
+    cssClass: 'icon rte ul'
+    order: 208
+    toolbarType: 'live-toolbar'
+    requires: ['escenic']
+  - commandName: 'insertOrderedList'
+    cssClass: 'icon rte ol'
+    order: 209
+    toolbarType: 'live-toolbar'
+    requires: ['escenic']
+  - commandName: 'escenicLink'
+    cssClass: 'icon rte link'
+    order: 210
+    toolbarType: 'live-toolbar'
+    requires: ['escenic']
+  - commandName: 'unlink'
+    cssClass: 'icon rte unlink'
+    order: 211
+    toolbarType: 'live-toolbar'
+    requires: ['escenic']
+  - commandName: 'blockquote'
+    cssClass: 'icon rte quote'
+    order: 212
+    toolbarType: 'live-toolbar'
+    requires: ['escenic']
+  - commandName: 'removeFormat'
+    cssClass: 'icon rte remove-formatting'
+    order: 213
+    toolbarType: 'live-toolbar'
+    requires: ['escenic']
+scribeCommands:
+  - serviceName: 'lc.embedScribeCommand.service'
+    order: 221
+    requires: ['escenic']
+  - serviceName: 'lc.scribe.imageAssetCommand.service'
+    order: 222
+    requires: ['escenic']
+  - serviceName: 'lc.scribe.image.upload.command.service'
+    order: 223
+    requires: ['escenic']

@@ -1,0 +1,5 @@
+dialogs:
+  - id: "cf-html-dialog"
+    name: "HtmlDialog"
+    directive: "cf-html-dialog"
+    order: 712

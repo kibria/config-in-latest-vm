@@ -1,0 +1,47 @@
+endpointServices:
+  newsgate:
+    - serviceName: "cf.cci.login.service"
+    - serviceName: "cf.cci.url.interceptor"
+    - serviceName: "cf.cci.sessionRecover.interceptor"
+    - serviceName: "cf.cci.killLock.service"
+    - serviceName: "cf.cci.spellCheck.service"
+sysinfoServices:
+    - serviceName: "cf.cci.sysinfo.service"
+      order: 102
+inUseByServices:
+    - serviceName: "cf.cci.inUseBy.service"
+      order: 721
+editors:
+  fieldServices:
+    - serviceName: "cf.cci.tag.field.editor.service"
+      order: 721
+fileUploadServices:
+  - serviceName: "cf.cci.file.upload.service"
+    order: 721
+currentUserServices:
+  - serviceName: "cf.cci.currentUser.service"
+    order: 721
+listItems:
+  - id: "cci-story"
+    directive: "cf-list-item-story"
+    mimeTypes: ["x-cci/story"]
+    requires:  ["newsgate"]
+    order: 721
+  - id: "cci-picture"
+    directive: "cf-list-item-picture"
+    mimeTypes: ["x-cci/picture"]
+    requires:  ["newsgate"]
+    order: 722
+  - id: "cci-person"
+    directive: "cf-list-item-person"
+    mimeTypes: ["x-cci/user", "x-cci/contact"]
+    requires:  ["newsgate"]
+    order: 723
+  - id: "cci-pdf"
+    directive: "cf-list-item-pdf"
+    mimeTypes: ["x-cci/graphics; type=pdf"]
+    requires: ["newsgate"]
+    order: 724
+sysInfoButtons:
+  - serviceName: "cf.cci.sysinfobutton.service"
+    order: 721

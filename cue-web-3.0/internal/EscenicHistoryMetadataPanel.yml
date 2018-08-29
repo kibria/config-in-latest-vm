@@ -1,0 +1,17 @@
+editors:
+  metadata:
+    - name: "cf-escenic-history-panel"
+      cssClass: "history"
+      title: "History" #translate
+      directive: "cf-history-panel"
+      mimeTypes:
+        - "x-ece/story"
+        - "x-ece/storyline"
+        - "x-ece/new-content"
+        - "x-ece/picture"
+        - "x-ece/gallery"
+        - "x-ece/event"
+        - "x-ece/video"
+      args: 'ng-model="ngModel.resource.data"'
+      requires:  ["escenic"]
+      order: 729

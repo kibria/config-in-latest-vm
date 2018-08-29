@@ -1,0 +1,12 @@
+enrichmentServices:
+  - name: "html service"
+    href: http://dhamkiwin10:2082/textHtmlService
+    title: "Html Service"
+    triggers:
+     - name: after-save-state-published       
+     - name: on-html-service-click
+  - name: "content-edit" 
+    href: "http://dhamkiwin10:2082/contentEdit" 
+    title: "Checking YLECUE-80" 
+    triggers: 
+      - name: on-click

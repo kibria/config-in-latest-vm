@@ -1,0 +1,11 @@
+menuBar:
+  menuBarItems:
+    - id: "cf-new-content-toggler"
+      name: "New Content Toggler"
+      directive: "cf-new-content-toggler"
+      order: 712
+dialogs:
+  - id: "cf-new-content"
+    name: "New Content"
+    directive: "cf-new-content"
+    order: 711

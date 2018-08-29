@@ -1,0 +1,73 @@
+editors:
+  editors:
+    - name: "cf-story-folder-editor"
+      directive: "cf-story-folder-details"
+      mimeTypes: ["x-cci/storyfolder"]
+      requires:  ["newsgate"]
+      order: 724
+favicons:
+  - path: "Images/static/favicon_type_storyfolder.ico"
+    mimeTypes: ["x-cci/storyfolder"]
+    order: 724
+sidePanels:
+  - id: "cf-story-folder-sidepanel"
+    name: "Story folders" #translate
+    cssClass: "storyFolders"
+    directive: "cf-story-folder-sidepanel"
+    mimeTypes: []
+    homeScreen: true
+    metadata: []
+    active: false
+    order: 701
+    requires:  ["newsgate-full-login"]
+homeScreenMetadata:
+  - homePanels: "cf-story-folder-sidepanel"
+    directive: "cf-story-folder-metadata-general"
+    name: "Story folder metadata" #translate
+    cssClass: "general-info"
+    title: "General info" #translate
+    dependencies: []
+    args: 'content-reference="ngModel.focusedResult" content="ngModel.focusedContent"'
+    order: 701
+  - homePanels: "cf-story-folder-sidepanel"
+    directive: "cf-no-focus-metadata"
+    name: "No focus metadata" #translate
+    cssClass: "general-info"
+    title: "General info" #translate
+    dependencies: []
+    order: 701
+    selection: ["none"]
+  - homePanels: "cf-story-folder-sidepanel"
+    directive: "cf-story-folder-metadata-stories"
+    name: "Story folder metadata" #translate
+    cssClass: "stories"
+    title: "Stories" #translate
+    dependencies: []
+    args: 'content-reference="ngModel.focusedResult" content="ngModel.focusedContent"'
+    order: 702
+  - homePanels: "cf-story-folder-sidepanel"
+    directive: "cf-story-folder-metadata-assets"
+    name: "Story folder metadata" #translate
+    cssClass: "assets"
+    title: "Assets" #translate
+    dependencies: []
+    args: 'content-reference="ngModel.focusedResult" content="ngModel.focusedContent"'
+    order: 703
+listItems:
+  - id: "cci-text"
+    directive: "cf-cci-text-list-item"
+    mimeTypes: ["x-cci/text"]
+    order: 731
+  - id: "cci-package"
+    directive: "cf-cci-package-list-item"
+    mimeTypes: ["x-cci/package"]
+    order: 732
+  - id: "cci-storyfolder"
+    directive: "cf-cci-storyfolder-list-item"
+    mimeTypes: ["x-cci/storyfolder"]
+    order: 741
+assetPanels:
+  - name: 'assets'
+    title: 'Assets' #translate
+    directive: 'cf-story-folder-assets'
+    order: 703

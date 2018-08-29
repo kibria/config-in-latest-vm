@@ -1,0 +1,34 @@
+homeScreenMetadata:
+  - homePanels: ["cf-escenic-search-sidepanel"]
+    directive: "cf-escenic-preview-panel"
+    name: "Preview" #translate
+    cssClass: "preview"
+    title: "Preview" #translate
+    args: 'content-reference="ngModel.getSelection()" content="ngModel.getSelectedContent()"'
+    requires:  ["escenic"]
+    order: 502
+  - homePanels: ["cf-latest-opened-leftpanel"]
+    directive: "cf-escenic-preview-panel"
+    name: "Preview" #translate
+    cssClass: "preview"
+    title: "Preview" #translate
+    args: 'content-reference="ngModel.focusedResult" content="ngModel.focusedContent"'
+    requires:  ["escenic"]
+    order: 502
+
+previewItems:
+  - id: "preview-video"
+    directive: "cf-escenic-preview-video"
+    mimeTypes: ["x-ece/video"]
+    requires:  ["escenic"]
+    order: 551
+  - id: "preview-image"
+    directive: "cf-escenic-preview-image"
+    mimeTypes: ["x-ece/picture"]
+    requires:  ["escenic"]
+    order: 552
+  - id: "preview-gallery"
+    directive: "cf-escenic-preview-gallery"
+    mimeTypes: ["x-ece/gallery"]
+    requires:  ["escenic"]
+    order: 553

@@ -1,0 +1,26 @@
+editors:
+  metadata:
+    - name: "cf-escenic-metadata-panel"
+      cssClass: "general-info"
+      title: "General info" #translate
+      directive: "cf-escenic-metadata-panel"
+      mimeTypes:
+        - "x-ece/story"
+        - "x-ece/new-content; type=story"
+        - "x-ece/storyline"
+        - "x-ece/new-content; type=storyline"
+        - "x-ece/picture"
+        - "x-ece/new-content; type=picture"
+        - "x-ece/gallery"
+        - "x-ece/new-content; type=gallery"
+        - "x-ece/event"
+        - "x-ece/new-content; type=event"
+        - "x-ece/video"
+        - "x-ece/new-content; type=video"
+        - "x-ece/section"
+        - "x-ece/new-content; type=section"
+        - "x-ece/person"
+        - "x-ece/new-content; type=person"
+      args: 'ng-model="ngModel.resource.data" related-links="ngModel.mediaEditor.relatedLinks" lock-helper="ngModel.lockHelper"'
+      requires:  ["escenic"]
+      order: 721

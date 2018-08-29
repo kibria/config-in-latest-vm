@@ -1,0 +1,18 @@
+enrichmentServices:
+  - name: Duplicate Service
+    href: http://localhost:8082/contentDuplicationService
+    title: Duplicate Service
+    triggers:
+      - name: "on-duplicate"
+        properties: {}
+
+extendedContextMenuItems:
+  - name: "duplicate-service"
+    title: "Duplicate" #translate
+    trigger: "on-duplicate"
+  - name: "duplicate-as-service"
+    title: "Duplicate as ..." #translate
+    trigger: "on-duplicate"
+
+authorizedEndpoints:
+  - "http://localhost:8082/"

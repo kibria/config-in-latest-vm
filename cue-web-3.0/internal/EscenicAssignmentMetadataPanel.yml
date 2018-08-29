@@ -1,0 +1,10 @@
+editors:
+  metadata:
+    - name: "cf-escenic-assignment-metadata-panel"
+      cssClass: "assignment"
+      title: "Assignment" #translate
+      directive: "cf-assignment-metadata-directive"
+      mimeTypes: ["x-ece/story"]
+      args: 'item-id="ngModel.itemId" assignment="ngModel.assignment" story="ngModel.story"'
+      requires: ["escenic", "newsgate"]
+      order: 728

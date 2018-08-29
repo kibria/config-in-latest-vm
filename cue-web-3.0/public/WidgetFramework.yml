@@ -1,0 +1,5 @@
+editors:
+  fieldServices:
+    - serviceName: "wf.datasource.field.editor.service"
+      requires: ['escenic']
+      order: 600

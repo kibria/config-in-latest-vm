@@ -1,0 +1,6 @@
+menuBar:
+  menuBarItems:
+    - id: "cf-mobile-nav-toggler"
+      name: "Mobile Navigation Toggler"
+      directive: "cf-mobile-nav-toggler"
+      order: 711

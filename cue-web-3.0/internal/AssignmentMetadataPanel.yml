@@ -1,0 +1,10 @@
+editors:
+  metadata:
+    - name: "cf-cci-assignment-metadata-panel"
+      cssClass: "assignment"
+      title: "Assignment" #translate
+      directive: "cf-assignment-metadata-directive"
+      mimeTypes: ["x-cci/text", "x-cci/assignment; type=picture", "x-cci/newtext"]
+      args: 'item-id="ngModel.itemId" assignment="ngModel.assignment" story="ngModel.story"'
+      requires: ["newsgate"]
+      order: 716

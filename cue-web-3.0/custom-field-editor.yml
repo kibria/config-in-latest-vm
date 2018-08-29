@@ -1,0 +1,7 @@
+customComponents:
+  - name: "custom-slider"
+    tagName: "my-slider"
+    htmlImport:  "http://ece-install/my-slider.html"
+  - name: "geo-field-editor"
+    tagName: "geo-code"
+    htmlImport: "http://ece-install/geocode-editor.html"

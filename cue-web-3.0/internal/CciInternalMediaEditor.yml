@@ -1,0 +1,32 @@
+editors:
+  mediaEditors:
+    - name: "cci-source"
+      label: "Source" #translate
+      type: "source"
+      directive: "cf-cci-source-editor"
+      mimeTypes: ["x-cci/text", "x-cci/newtext", "x-ece/story"]
+      requires:  ["newsgate"]
+      activationOrder: 2
+      order: 301
+
+    - name: "cci-print-internal"
+      label: "Print" #translate
+      type: "print"
+      directive: "cf-cci-internal-print-editor"
+      mimeTypes: ["x-cci/text", "x-cci/newtext"]
+      requires: ["newsgate-full-login"]
+      activationOrder: 3
+      order: 711
+
+    - name: "cci-digital-internal"
+      label: "Tablet" #translate
+      type: "digital"
+      directive: "cf-cci-internal-digital-editor"
+      mimeTypes: ["x-cci/text", "x-cci/newtext"]
+      requires: ["newsgate-full-login"]
+      activationOrder: 4
+      order: 721
+packageServices:
+  - serviceName: "cf.cci.media.internal.package.service"
+    requires:  ["newsgate"]
+    order: 722

@@ -1,0 +1,10 @@
+editors:
+  metadata:
+    - name: "cf-cci-text-text-properties-metadata-panel"
+      requires:  ["newsgate-full-login"]
+      cssClass: "text-properties"
+      title: "Text Properties" #translate
+      directive: "cf-text-cci-metadata-panel-text-properties-directive"
+      mimeTypes: ["x-cci/text", "x-cci/newtext"]
+      args: 'text-properties-delegate="ngModel.textPropertiesDelegate"'
+      order: 715

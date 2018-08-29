@@ -1,0 +1,29 @@
+defaultHeadingLevel: 2
+headingLevels: "1, 2, 3, 4, 5, 6"
+toolbarButtons:
+  - commandName: "heading"
+    label: "Heading" #translate
+    cssClass: "h"
+    toolbarType: "escenic-toolbar"
+    requires: ["escenic"]
+    order: 1
+  - commandName: "headingDropDown"
+    label: "Choose heading" #translate
+    cssClass: "drop-down"
+    toolbarType: "escenic-toolbar"
+    requires: ["escenic"]
+    order: 2
+scribeCommands:
+  - serviceName: "cf.escenic.heading.command.service"
+    requires: ["escenic"]
+    restrict: "escenic"
+    order: 735
+  - serviceName: "cf.escenic.heading.dropDown.command.service"
+    requires: ["escenic"]
+    restrict: "escenic"
+    order: 736
+scribeToolbarDropDowns:
+  - directive: "cf-escenic-heading-drop-down"
+    toolbarType: "escenic-toolbar"
+    requires: ["escenic"]
+    order: 736

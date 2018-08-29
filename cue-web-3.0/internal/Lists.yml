@@ -1,0 +1,49 @@
+editors:
+  editors:
+    - name: "cf-list-editor"
+      directive: "cf-list-editor"
+      mimeTypes: ["x-ece/list"]
+      requires:  ["escenic"]
+      order: 711
+favicons:
+  - path: "Images/static/favicon_type_list.ico"
+    mimeTypes: ["x-ece/list"]
+    order: 711
+sidePanels:
+  - id: "cf-lists-sidepanel"
+    name: "Lists" #translate
+    cssClass: "lists"
+    title: "Lists" #translate
+    directive: "cf-lists-sidepanel"
+    mimeTypes: ["x-ece/section", "x-ece/section-page"]
+    homeScreen: true
+    metadata: []
+    active: false
+    order: 704
+listItems:
+  - id: "escenic-list"
+    directive: "cf-escenic-list-list-item"
+    mimeTypes: ["x-ece/list"]
+    order: 711
+homeScreenMetadata:
+  - homePanels: "cf-lists-sidepanel"
+    directive: "cf-escenic-lists-metadata"
+    name: "Lists metadata"
+    cssClass: "general-info"
+    title: "Lists metadata" #translate
+    dependencies: []
+    args: 'list="ngModel.focusedResult"'
+    order: 704
+  - homePanels: "cf-lists-sidepanel"
+    directive: "cf-no-focus-metadata"
+    name: "No focus metadata" #translate
+    cssClass: "general-info"
+    title: "General info" #translate
+    dependencies: []
+    order: 704
+    selection: ["none"]
+dialogs:
+  - id: "cf-new-list"
+    name: "New List"
+    directive: "cf-new-list"
+    order: 711

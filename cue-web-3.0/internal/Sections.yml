@@ -1,0 +1,77 @@
+editors:
+  editors:
+    - name: "cf-escenic-section-editor"
+      directive: "cf-escenic-section-editor"
+      mimeTypes: ["x-ece/section-page"]
+      requires:  ["escenic"]
+      order: 712
+  metadata:
+    - name: "cf-sections-editor-metadata-panel"
+      cssClass: "general-info"
+      title: "General info" #translate
+      directive: "cf-sections-editor-metadata-panel"
+      mimeTypes: ["x-ece/section-page"]
+      args: 'section-page="ngModel.sectionPage" read-only="ngModel.hasAreaLock"'
+    - name: "cf-sections-editor-pages-metadata-panel"
+      cssClass: "section"
+      title: "Pages" #translate
+      directive: "cf-sections-editor-pages-metadata-panel"
+      mimeTypes: ["x-ece/section-page"]
+      args: 'section="ngModel.section" section-page-id="ngModel.sectionPage.id"'
+    - name: "cf-sections-editor-page-metadata-panel"
+      cssClass: "section-options"
+      title: "Page options" #translate
+      directive: "cf-sections-editor-page-metadata-panel"
+      mimeTypes: ["x-ece/section-page"]
+      args: 'root-group-options="ngModel.sectionPage.rootGroup.options" lock-helper="ngModel.lockHelper"'
+    - name: "cf-sections-editor-group-metadata-panel"
+      cssClass: "group-options"
+      title: "Group options" #translate
+      directive: "cf-sections-editor-group-metadata-panel"
+      mimeTypes: ["x-ece/section-page"]
+      args: 'selected-item="ngModel.selectedItem" lock-helper="ngModel.lockHelper"'
+    - name: "cf-sections-editor-teaser-metadata-panel"
+      cssClass: "teaser-options"
+      title: "Teaser options" #translate
+      directive: "cf-sections-editor-teaser-metadata-panel"
+      mimeTypes: ["x-ece/section-page"]
+      args: 'selected-item="ngModel.selectedItem" lock-helper="ngModel.lockHelper"'
+favicons:
+  - path: "Images/static/favicon_type_page.ico"
+    mimeTypes:
+      - "x-ece/section"
+      - "x-ece/section-page"
+      - "x-ece/new-content; type=section"
+    order: 712
+sidePanels:
+  - id: "cf-sections-sidepanel"
+    name: "Sections" #translate
+    cssClass: "sections"
+    directive: "cf-sections-sidepanel"
+    mimeTypes: []
+    homeScreen: true
+    platforms: ["desktop"]
+    active: false
+    order: 703
+homeScreenMetadata:
+  - homePanels: ["cf-sections-sidepanel"]
+    directive: "cf-sections-pages-metadata"
+    name: "Section pages panel metadata"
+    cssClass: "section"
+    title: "Pages" #translate
+    dependencies: []
+    args: 'page-links="ngModel.pageLinks" open-link="ngModel.openSectionPageLink(link)"'
+    order: 701
+  - homePanels: ["cf-sections-sidepanel"]
+    directive: "cf-sections-lists-metadata"
+    name: "Section lists metadata panel"
+    cssClass: "lists"
+    title: "Lists" #translate
+    dependencies: []
+    args: 'lists="ngModel.lists" open-link="ngModel.openListLink(link)" add-list="ngModel.addList()"'
+    order: 702
+dialogs:
+  - id: "cf-change-layout"
+    name: "Layout Change"
+    directive: "cf-change-layout"
+    order: 712

@@ -1,0 +1,10 @@
+customComponents:
+  - name: "string-slider"
+    tagName: "string-slider"
+    htmlImport:  "http://ece-install/string-slider.html"
+  - name: "number-slider"
+    tagName: "number-slider"
+    htmlImport: "http://ece-install/number-slider.html"
+  - name: "number-slider-old"
+    tagName: "number-slider-old"
+    htmlImport: "http://ece-install/number-slider_old.html"

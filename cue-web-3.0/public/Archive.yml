@@ -1,0 +1,181 @@
+#editors:
+#  editors:
+#    - name: "cf-archive-editor"
+#      directive: "cf-archive-editor"
+#      mimeTypes: ["x-ece/archive; type=span"]
+#      requires: ['escenic']
+#      order: 620
+#    - name: "cf-archive-asset-editor"
+#      directive: "cf-archive-asset-editor"
+#      mimeTypes:
+#        - "x-ece/archive; type=pdf"
+#        - "x-ece/archive; type=indd"
+#        - "x-ece/archive; type=text"
+#        - "x-ece/picture; type=tiff"
+#        - "x-ece/picture; type=psd"
+#        - "x-ece/picture; type=jpeg"
+#        - "x-ece/picture; type=png"
+#        - "x-ece/picture; type=pdf"
+#        - "x-ece/picture; type=eps"
+#        - "x-ece/picture; type=ai"
+#        - "x-ece/picture; type=indd"
+#      requires: ['escenic']
+#      order: 621
+#  metadata:
+#    - name: "cf-archive-general-metadata"
+#      cssClass: "general"
+#      directive: "cf-archive-general-metadata"
+#      mimeTypes:
+#        - "x-ece/archive; type=span"
+#      args: 'content-reference="ngModel.spanReference" hide-open="true" archive-content-download="ngModel.archiveContentDownload" download="ngModel.download(contentReference)"'
+#      requires: ['escenic']
+#      order: 620
+#    - name: "cf-archive-asset-general-metadata"
+#      cssClass: "general"
+#      directive: "cf-archive-general-metadata"
+#      mimeTypes:
+#        - "x-ece/archive; type=pdf"
+#        - "x-ece/archive; type=indd"
+#        - "x-ece/archive; type=text"
+#        - "x-ece/picture; type=tiff"
+#        - "x-ece/picture; type=psd"
+#        - "x-ece/picture; type=jpeg"
+#        - "x-ece/picture; type=png"
+#        - "x-ece/picture; type=pdf"
+#        - "x-ece/picture; type=eps"
+#        - "x-ece/picture; type=ai"
+#        - "x-ece/picture; type=indd"
+#      args: 'content-reference="ngModel.asset" hide-open="true" archive-content-download="ngModel.archiveContentDownload" download="ngModel.download(contentReference)"'
+#      requires: ['escenic']
+#      order: 621
+#    - name: "cf-archive-preview-metadata"
+#      cssClass: "preview"
+#      directive: "cf-archive-preview-metadata"
+#      mimeTypes:
+#        - "x-ece/archive; type=span"
+#      args: 'images="ngModel.previewImages" content-reference="ngModel.asset"'
+#      requires: ['escenic']
+#      order: 622
+#    - name: "cf-archive-asset-usages-metadata"
+#      cssClass: "usages"
+#      directive: "cf-archive-usages-metadata"
+#      mimeTypes:
+#        - "x-ece/archive; type=pdf"
+#        - "x-ece/archive; type=indd"
+#        - "x-ece/archive; type=text"
+#        - "x-ece/picture; type=tiff"
+#        - "x-ece/picture; type=psd"
+#        - "x-ece/picture; type=jpeg"
+#        - "x-ece/picture; type=png"
+#        - "x-ece/picture; type=pdf"
+#        - "x-ece/picture; type=eps"
+#        - "x-ece/picture; type=ai"
+#        - "x-ece/picture; type=indd"
+#      args: 'content-reference="ngModel.asset"'
+#      requires: ['escenic']
+#      order: 623
+#    - name: "cf-archive-file-metadata"
+#      cssClass: "file"
+#      directive: "cf-archive-file-metadata"
+#      mimeTypes: ["x-ece/archive; type=span"]
+#      args: 'content-reference="ngModel.selected" hide-open="true" span-reference ="ngModel.spanReference"  archive-content-download="ngModel.archiveSelectedContentDownload" download="ngModel.download(contentReference)"'
+#      requires: ['escenic']
+#      order: 624
+#  fieldServices:
+#    - serviceName: "cf.archive.asset.field.editor.service"
+#      requires: ['escenic']
+#      order: 220
+#    - serviceName: "cf.archive.body.text.field.editor.service"
+#      requires: ['escenic']
+#      order: 221
+#sidePanels:
+#  - id: "cf-archive-sidepanel"
+#    name: "CUE Archive" #translate
+#    cssClass: "archive"
+#    directive: "cf-archive-sidepanel"
+#    mimeTypes: []
+#    homeScreen: true
+#    transitionConfig:
+#      supportedParams: ['filter']
+#      transitionOptions:
+#        reload: true
+#    metadata: []
+#    active: false
+#    requires: ['escenic']
+#    order: 620
+#homeScreenMetadata:
+#  - homePanels: "cf-archive-sidepanel"
+#    directive: "cf-archive-general-metadata"
+#    name: "Archive metadata" #translate
+#    cssClass: "general-info"
+#    title: "General info" #translate
+#    args: 'content-reference="ngModel.getSelection()" archive-content-download="ngModel.archiveContentDownload" download="ngModel.download(contentReference)"'
+#    dependencies: []
+#    requires: ['escenic']
+#    order: 620
+#    selection: ["single"]
+#  - homePanels: "cf-archive-sidepanel"
+#    directive: "cf-no-focus-metadata"
+#    name: "No focus metadata" #translate
+#    cssClass: "general-info"
+#    title: "General info" #translate
+#    dependencies: []
+#    requires: ['escenic']
+#    order: 620
+#    selection: ["none"]
+#  - homePanels: "cf-archive-sidepanel"
+#    directive: "cf-archive-preview-metadata"
+#    name: "Archive metadata" #translate
+#    cssClass: "preview"
+#    args: 'images="ngModel.previewImages" content-reference="ngModel.getSelection()"'
+#    dependencies: []
+#    requires: ['escenic']
+#    order: 621
+#    selection: ["single"]
+#  - homePanels: "cf-archive-sidepanel"
+#    directive: "cf-archive-usages-metadata"
+#    name: "Archive metadata" #translate
+#    args: 'content-reference="ngModel.getSelection()"'
+#    cssClass: "usages"
+#    dependencies: []
+#    requires: ['escenic']
+#    order: 622
+#    selection: ["single"]
+#listItems:
+#  - id: "archive-span"
+#    directive: "cf-archive-span-list-item"
+#    mimeTypes: ["x-ece/archive; type=span"]
+#    requires: ['escenic']
+#    order: 620
+#  - id: "archive-asset"
+#    directive: "cf-archive-asset-list-item"
+#    mimeTypes:
+#      - "x-ece/archive; type=pdf"
+#      - "x-ece/archive; type=indd"
+#      - "x-ece/archive; type=text"
+#      - "x-ece/picture; type=tiff"
+#      - "x-ece/picture; type=psd"
+#      - "x-ece/picture; type=jpeg"
+#      - "x-ece/picture; type=png"
+#      - "x-ece/picture; type=pdf"
+#      - "x-ece/picture; type=eps"
+#      - "x-ece/picture; type=ai"
+#      - "x-ece/picture; type=indd"
+#    requires: ['escenic']
+#    order: 621
+#excludePublicationsInSearch:
+#  - name: "archive"
+#    mimeTypes:
+#      - "x-ece/archive; type=span"
+#      - "x-ece/archive; type=pdf"
+#      - "x-ece/archive; type=indd"
+#      - "x-ece/archive; type=text"
+#      - "x-ece/picture; type=tiff"
+#      - "x-ece/picture; type=psd"
+#      - "x-ece/picture; type=jpeg"
+#      - "x-ece/picture; type=png"
+#      - "x-ece/picture; type=pdf"
+#      - "x-ece/picture; type=eps"
+#      - "x-ece/picture; type=ai"
+#      - "x-ece/picture; type=indd"
+#    requires: ['escenic']

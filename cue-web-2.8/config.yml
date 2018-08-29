@@ -1,0 +1,2 @@
+endpoints:
+  escenic: "http://ece-install:80/webservice/index.xml"

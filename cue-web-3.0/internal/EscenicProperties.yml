@@ -1,0 +1,6 @@
+dialogs:
+  - id: "cf-escenic-properties"
+    name: "EscenicProperties"
+    directive: "cf-escenic-properties"
+    requires:  ["escenic"]
+    order: 723

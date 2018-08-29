@@ -1,0 +1,64 @@
+editors:
+  editors:
+    - name: "escenic-story-editor"
+      directive: "cf-story-editor"
+      mimeTypes: ["x-ece/*"]
+      requires:  ["escenic"]
+      order: 790
+  mediaEditors:
+    - name: "escenic"
+      label: "Online" #translate
+      type: "online"
+      directive: "cf-escenic-media-editor"
+      mimeTypes: ["x-ece/*", "x-cci/text"]
+      activationOrder: 1
+      requires:  ["escenic"]
+      order: 311
+favicons:
+  - path: "Images/static/favicon_type_photo.ico"
+    mimeTypes:
+      - "x-ece/picture"
+      - "x-ece/new-content; type=picture"
+    order: 721
+  - path: "Images/static/favicon_type_gallery.ico"
+    mimeTypes:
+      - "x-ece/gallery"
+      - "x-ece/new-content; type=gallery"
+    order: 722
+  - path: "Images/static/favicon_type_video.ico"
+    mimeTypes:
+      - "x-ece/video"
+      - "x-ece/new-content; type=video"
+    order: 723
+  - path: "Images/static/favicon_type_author.ico"
+    mimeTypes:
+      - "x-ece/person"
+      - "x-ece/new-content; type=person"
+    order: 724
+  - path: "Images/static/favicon_type_story.ico"
+    mimeTypes: ["x-ece/*"]
+    order: 790
+toolbarButtons:
+  - commandName: "escenicLink"
+    label: "link" #translate
+    cssClass: "link"
+    toolbarType: "escenic-toolbar"
+    requires:  ["escenic"]
+    order: 711
+  - commandName: "unlink"
+    label: "unlink" #translate
+    cssClass: "unlink"
+    toolbarType: "escenic-toolbar"
+    requires:  ["escenic"]
+    order: 712
+  - commandName: "table"
+    label: "Insert Table" #translate
+    cssClass: "table"
+    toolbarType: "escenic-toolbar"
+    platforms: ["desktop"]
+    requires:  ["escenic"]
+    order: 713
+packageServices:
+  - serviceName: "cf.escenic.package.service"
+    requires:  ["escenic"]
+    order: 999

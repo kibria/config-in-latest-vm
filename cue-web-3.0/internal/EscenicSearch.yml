@@ -1,0 +1,50 @@
+searchResults:
+  - maxHeight: 400
+    resultsPerPage: 10
+
+  - maxHeight: 800
+    resultsPerPage: 20
+
+  - maxHeight: 0
+    resultsPerPage: 40
+sidePanels:
+  - id: "cf-escenic-search-sidepanel"
+    name: "Search" #translate
+    cssClass: "search"
+    directive: "cf-escenic-search-sidepanel"
+    mimeTypes: ["*/*"]
+    homeScreen: true
+    transitionConfig:
+      supportedParams: ['filter']
+      transitionOptions:
+        reload: true
+    active: true
+    requires:  ["escenic"]
+    order: 301
+homeScreenMetadata:
+  - homePanels: "cf-escenic-search-sidepanel"
+    directive: "cf-escenic-search-metadata"
+    name: "Search metadata" #translate
+    cssClass: "general-info"
+    title: "General info" #translate
+    dependencies: []
+    selection: ["single"]
+    args: 'content-reference="ngModel.getSelection()" content="ngModel.getSelectedContent()"'
+    order: 301
+  - homePanels: "cf-escenic-search-sidepanel"
+    directive: "cf-no-focus-metadata"
+    name: "No focus metadata" #translate
+    cssClass: "general-info"
+    title: "General info" #translate
+    dependencies: []
+    order: 301
+    selection: ["none"]
+  - homePanels: "cf-escenic-search-sidepanel"
+    directive: "cf-general-multi-selection"
+    name: "General info multi selection"
+    cssClass: "general-info"
+    title: "General info" #translate
+    dependencies: []
+    selection: ["multi"]
+    args: 'content="ngModel.entries.selections"'
+    order: 301

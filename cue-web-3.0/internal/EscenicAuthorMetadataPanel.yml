@@ -1,0 +1,22 @@
+editors:
+  metadata:
+    - name: "cf-escenic-author-panel"
+      cssClass: "authors"
+      title: "Authors" #translate
+      directive: "cf-escenic-author-panel"
+      mimeTypes:
+        - "x-ece/story"
+        - "x-ece/new-content; type=story"
+        - "x-ece/storyline"
+        - "x-ece/new-content; type=storyline"
+        - "x-ece/picture"
+        - "x-ece/new-content; type=picture"
+        - "x-ece/gallery"
+        - "x-ece/new-content; type=gallery"
+        - "x-ece/event"
+        - "x-ece/new-content; type=event"
+        - "x-ece/video"
+        - "x-ece/new-content; type=video"
+      args: 'ng-model="ngModel.resource.data" lock-helper="ngModel.lockHelper"'
+      requires:  ["escenic"]
+      order: 724

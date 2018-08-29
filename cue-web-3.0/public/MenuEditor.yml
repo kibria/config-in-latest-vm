@@ -1,0 +1,43 @@
+editors:
+  editors:
+    - name: "cf-escenic-menu-editor"
+      directive: "cf-escenic-menu-editor"
+      mimeTypes: ["x-ece/menu"]
+      requires:  ["escenic"]
+      order: 713
+  metadata:
+    - name: "cf-escenic-menu-editor-item-metadata"
+      cssClass: "item-metadata"
+      directive: "cf-escenic-menu-editor-item-metadata"
+      mimeTypes: ["x-ece/menu"]
+      requires:  ["escenic"]
+      order: 713
+    - name: "cf-escenic-menu-editor-item-properties"
+      cssClass: "item-properties"
+      directive: "cf-escenic-menu-editor-item-properties"
+      mimeTypes: ["x-ece/menu"]
+      args: 'item="ngModel.selectedItem"'
+      requires:  ["escenic"]
+      order: 714
+sidePanels:
+  - id: "cf-menu-sections-sidepanel"
+    name: "Sections" #translate
+    cssClass: "sections"
+    directive: "cf-sections-sidepanel"
+    mimeTypes: ["x-ece/menu"]
+    platforms: ["desktop"]
+    active: false
+    requires:  ["escenic"]
+    order: 713
+pluginLinks:
+  - uri: "menu"
+    mimeType: "x-ece/menu"
+    name: "Menu Editor" #translate
+    requires:  ["escenic"]
+    order: 713
+listItems:
+  - id: "escenic-menu-editor"
+    directive: "cf-escenic-menu-editor-list-item"
+    mimeTypes: ["x-ece/menu"]
+    requires:  ["escenic"]
+    order: 713

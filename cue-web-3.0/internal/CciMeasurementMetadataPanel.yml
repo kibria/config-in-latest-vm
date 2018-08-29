@@ -1,0 +1,10 @@
+editors:
+  metadata:
+    - name: "cf-cci-measurement-metadata-panel"
+      cssClass: "measurement"
+      title: "Measurements" #translate
+      directive: "cf-cci-measurement-directive"
+      mimeTypes: ["x-cci/text"]
+      args: 'item-id="ngModel.itemId" content="ngModel.resource.data" active="ngModel.active" package-id="ngModel.packagePropertiesDelegate.packageId"'
+      requires: ["newsgate"]
+      order: 713

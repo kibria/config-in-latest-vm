@@ -1,0 +1,10 @@
+editors:
+  metadata:
+    - name: "cf-cci-text-general-info-metadata-panel"
+      requires:  ["newsgate-full-login"]
+      cssClass: "general-info"
+      title: "General info" #translate
+      directive: "cf-text-cci-metadata-panel-general-info-directive"
+      mimeTypes: ["x-cci/text", "x-cci/newtext"]
+      args: 'text-properties="ngModel.textPropertiesDelegate" story="ngModel.storyLink"'
+      order: 711

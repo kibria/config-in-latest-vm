@@ -1,0 +1,22 @@
+editors:
+  metadata:
+    - name: "cf-escenic-related-metadata-panel"
+      cssClass: "related"
+      title: "Related" #translate
+      directive: "cf-escenic-related-metadata-panel"
+      mimeTypes:
+        - "x-ece/story"
+        - "x-ece/new-content; type=story"
+        - "x-ece/picture"
+        - "x-ece/new-content; type=picture"
+        - "x-ece/gallery"
+        - "x-ece/new-content; type=gallery"
+        - "x-ece/event"
+        - "x-ece/new-content; type=event"
+        - "x-ece/video"
+        - "x-ece/new-content; type=video"
+        - "x-ece/person"
+        - "x-ece/new-content; type=person"
+      args: 'ng-model="ngModel.resource.data" lock-helper="ngModel.lockHelper"'
+      requires:  ["escenic"]
+      order: 725

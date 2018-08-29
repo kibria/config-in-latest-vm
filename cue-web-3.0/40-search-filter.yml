@@ -1,0 +1,21 @@
+searchFilter:
+  - id: "document-types"
+    name: "Document Types" #translate
+  - id: "document-states"
+    name: "Document States" #translate
+  - id: "creation-date"
+    name: "Creation date" #translate
+  - id: "authors"
+    name: "Authors" #translate
+  - id: "sections"
+    name: "Sections" #translate
+  - id: "tags"
+    name: "Tags" #translate
+
+# Adding boolean criteria to the search filter as a custom search filter you need to add new item with property of id, name and the solr query.
+# This costom solr query will be added with the main query with an AND operator.
+# Custom search filters will be rendered in the UI based on this configuration sort order.
+# Here is an example of a custom filter
+#  - id: "premium-content"
+#    name: "Premium Content" #translate
+#    query: "premium_b:true"

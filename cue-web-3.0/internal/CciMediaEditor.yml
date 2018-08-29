@@ -1,0 +1,30 @@
+editors:
+  editors:
+    - name: "cci-story-editor"
+      directive: "cf-story-editor"
+      mimeTypes: ["x-cci/text", "x-cci/newtext"]
+      requires:  ["newsgate"]
+      order: 721
+favicons:
+  - path: "Images/static/favicon_type_text.ico"
+    mimeTypes: ["x-cci/text", "x-cci/newtext"]
+    order: 721
+toolbarButtons:
+  - commandName: "linkPrompt"
+    label: "link" #translate
+    cssClass: "link"
+    toolbarType: "cci-toolbar"
+    requires:  ["newsgate"]
+    order: 721
+  - commandName: "unlink"
+    label: "unlink" #translate
+    cssClass: "unlink"
+    toolbarType: "cci-toolbar"
+    requires:  ["newsgate"]
+    order: 722
+dialogs:
+  - id: "cf-cci-package-dialog"
+    name: "Add package"
+    directive: "cf-cci-package-dialog"
+    requires:  ["newsgate"]
+    order: 712

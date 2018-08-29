@@ -1,0 +1,12 @@
+sidePanels:
+  - id: "cf-cci-assets"
+    name: "Assets" #translate
+    cssClass: "assets"
+    directive: "cf-cci-assets"
+    mimeTypes:
+      - "x-ece/story"
+      - "x-ece/new-content; type=story"
+      - "x-cci/text"
+      - "x-cci/newtext"
+    requires: ["newsgate-full-login"]
+    order: 703

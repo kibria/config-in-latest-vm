@@ -1,0 +1,23 @@
+editors:
+  mediaEditors:
+    - name: "cci-print-external"
+      label: "Print" #translate
+      type: "print"
+      directive: "cf-cci-external-print-editor"
+      mimeTypes: ["x-ece/*"]
+      activationOrder: 3
+      requires: ["newsgate-full-login", "escenic"]
+      order: 712
+
+    - name: "cci-digital-external"
+      label: "Tablet" #translate
+      type: "digital"
+      directive: "cf-cci-external-digital-editor"
+      mimeTypes: ["x-ece/*"]
+      activationOrder: 4
+      requires: ["newsgate-full-login", "escenic"]
+      order: 722
+packageServices:
+  - serviceName: "cf.cci.media.external.package.service"
+    requires: ["newsgate-full-login", "escenic"]
+    order: 721

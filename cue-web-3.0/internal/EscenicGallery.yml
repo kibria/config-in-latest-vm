@@ -1,0 +1,10 @@
+editors:
+  fieldServices:
+    - serviceName: "cf.escenic.gallery.field.editor.service"
+      requires:  ["escenic"]
+      order: 712
+escenicFieldConverters:
+  - serviceName: "cf.escenic.gallery.field.converter"
+    # Gallery fields must be parsed before array fields
+    requires:  ["escenic"]
+    order: 712
